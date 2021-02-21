@@ -75,65 +75,73 @@ header .icons .fa-search {
 }
 
 /* Video info */
-body >.info {
+.infoAndUpNext >.info {
   padding: var(--padding);
 }
 
-.info .metadata .hashtags {
+.infoAndUpNext .info .metadata .hashtags {
   display: flex;
   font-size: var(--font-small);
   color: var(--blue-color);
 }
 
-.info .metadata .hashtags li {
+.infoAndUpNext .info .metadata .hashtags li {
   margin-right: var(--padding);
 }
 
-.info .metadata .titleAndButton {
+.infoAndUpNext .info .metadata .titleAndButton {
   display: flex;
 
 }
 
-.info .metadata .titleAndButton .title {
+.infoAndUpNext .info .metadata .titleAndButton .title {
   font-size: var(--font-medium);
+  margin-right: var(--padding);
+}
+
+.infoAndUpNext .info .metadata .titleAndButton .title.clamp {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  margin-right: var(--padding);
 }
 
-.info .metadata .titleAndButton .moreBtn {
+.infoAndUpNext .info .metadata .titleAndButton .moreBtn {
   height: 100%;
+  transition: transform 300ms ease-in-out;
 }
 
-.info .views {
+.infoAndUpNext .info .metadata .titleAndButton .moreBtn.clicked {
+  transform: rotate(180deg);
+}
+
+.infoAndUpNext .info .views {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
 
 /* Actions */
-.info .actions {
+.infoAndUpNext .info .actions {
   display: flex;
   justify-content: space-between;
   margin: var(--padding) 0;
 }
 
-.info .actions button {
+.infoAndUpNext .info .actions button {
   display:flex;
   flex-direction: column;
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
 
-.info .actions button i {
+.infoAndUpNext .info .actions button i {
   margin: 0 auto;
   margin-bottom: calc(var(--padding) / 2);
   font-size: 16px;
 }
 
 /* Channel Description */
-.info .channel {
+.infoAndUpNext .info .channel {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--grey-light-color);
@@ -141,75 +149,87 @@ body >.info {
   padding: var(--padding);
 }
 
-.info .channel .metadata {
+.infoAndUpNext .info .channel .metadata {
   display: flex;
   align-items: center;
 }
-.info .channel .metadata .info {
+.infoAndUpNext .info .channel .metadata .info {
   display: flex;
   flex-direction: column;
 }
 
-.info .channel .metadata img {
+.infoAndUpNext .info .channel .metadata img {
   width: var(--avatar-size);
   height: var(--avatar-size);
   border-radius: 50%;
   margin-right: var(--padding);
 }
 
-.info .channel .metadata .info {
+.infoAndUpNext .info .channel .metadata .info {
   font-size: var(--font-medium);
 }
 
-.info .channel .metadata .info .subscribers {
+.infoAndUpNext .info .channel .metadata .info .subscribers {
   font-size: var(--font-small);
   color: var(--grey-dark-color);
 }
 
-.info .channel .subscribe {
+.infoAndUpNext .info .channel .subscribe {
   text-transform: uppercase;
   color: var(--red-color);
   font-size: var(--font-medium);
 }
 
 /* upNext */
-.upNext {
+.infoAndUpNext .upNext {
   padding: 0 var(--padding);
 }
 
-.upNext .item > img {
+.infoAndUpNext .upNext .item > img {
   width: 100%;
-  max-width: 400px;
+  min-width: 200px;
   margin-right: var(--padding);
 }
 
-.upNext > .title {
+.infoAndUpNext .upNext > .title {
   font-size: var(--font-medium);
   margin-bottom: calc(var(--padding) /2 );
 }
 
-.upNext .item {
+.infoAndUpNext .upNext .item {
   display: flex;
   margin-top: var(--padding);
 }
 
-.upNext .item img {
+.infoAndUpNext .upNext .item img {
   flex: 1 1 35%;
 }
 
-.upNext .item .info {
+.infoAndUpNext .upNext .item .info {
   flex: 1 1 60%;
   display: flex;
   flex-direction: column;
 }
 
-.upNext .item .moreBtn {
+.infoAndUpNext .upNext .item .moreBtn {
   flex: 1 1 5%;
   height: 100%;
 }
 
-.upNext .item .info .name,
-.upNext .item .info .views {
+.infoAndUpNext .upNext .item .info .name,
+.infoAndUpNext .upNext .item .info .views {
   font-size: var(--font-micro);
   color: var(--grey-dark-color);
+}
+
+.infoAndUpNext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoAndUpNext {
+    flex-direction: row;
+    margin: var(--padding) 0;
+  }
 }
