@@ -1,4 +1,4 @@
-# Project :YouTube Clone Coding practice
+# Project :YouTube Clone Coding **CSS** practice
 
 ## 🔨 Stack
 <p>
@@ -7,4 +7,7 @@
 <img src="https://img.shields.io/badge/CSS3-1572b6?style=for-the-badge&logo=CSS3&logoColor=white"/>
 </p>
 
-## 🔔used API
+## 🔔Views
+![]()
+![]()
+![]()
