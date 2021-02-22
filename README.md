@@ -1,4 +1,4 @@
-# Project :YouTube Clone Coding **CSS** practice
+# Project :YouTube Clone Coding for **CSS** practice
 
 ## 🔨 Stack
 <p>
